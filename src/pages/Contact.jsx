@@ -1,12 +1,15 @@
+import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+
+
 
 export default function Contact() {
   return (
     <>
-    <Navbar/>
-    <div>Besok diisi embed katanya</div>
-  <Footer/>
+      <Navbar />
+      <ContactForm  />
+      <Footer />
     </>
-    )
+  );
 }
