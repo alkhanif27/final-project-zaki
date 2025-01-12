@@ -4,9 +4,10 @@ import { Link } from "react-router";
 export default function Navbar() {
   const menus = [
     { name: "Home", link: "/" },
+    { name: "Service", link: "/Service" },
     { name: "About", link: "/about" },
     { name: "Contact", link: "/Contact" },
-    { name: "Service", link: "/Service" },
+    
   ];
 
   const [isOpen, setIsOpen] = useState(false);

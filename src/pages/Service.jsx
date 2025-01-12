@@ -5,7 +5,7 @@ export default function Service() {
   return (
     <>
       <Navbar />
-      <div className="card lg:card-side bg-base-100 shadow-xl container">
+      <div className="card lg:card-side bg-base-100 shadow-xl container  ">
         <figure>
           <img
             src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
