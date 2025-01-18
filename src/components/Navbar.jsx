@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router";
+import LogoNeza from "../assets/LogoNeza.png";
 
 export default function Navbar() {
   const menus = [
@@ -7,22 +8,17 @@ export default function Navbar() {
     { name: "Service", link: "/Service" },
     { name: "About", link: "/about" },
     { name: "Contact", link: "/Contact" },
-    
   ];
 
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-blue-500 text-white p-4 sticky container">
+    <nav className="bg-white text-green-900 p-4 sticky container">
       <div className="container flex justify-between items-center py-5">
         {/* logo */}
-        <img
-          src="https://picsum.photos/200"
-          alt="logo"
-          className="size-6 rounded-full"
-        />
+        <img src={LogoNeza} alt="logo" className="w-40 h-20"/>
         {/* menus desktop */}
-        <ul className="sm:flex gap-4 items-center hidden ">
+        <ul className="sm:flex gap-4 items-center hidden font-bold ">
           {/* pengulangan array list menus */}
           {menus.map((menu, index) => (
             <li key={index}>
@@ -30,7 +26,7 @@ export default function Navbar() {
                 {menu.name}
               </Link>
             </li>
-          ))}
+          ))} 
         </ul>
         {/* button trigger mobile menu */}
         <button onClick={() => setIsOpen(!isOpen)} className="sm:hidden">
