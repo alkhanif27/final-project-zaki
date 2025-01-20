@@ -4,7 +4,7 @@ import HeroSection from "../components/HeroSection";
 import Navbar from "../components/Navbar";
 import OurSeviceSection from "../components/OurSeviceSection";
 import SectionDestination from "../components/SectionDestination";
-import TestimoniSection from "../components/TestimoniSection";
+import TestimoniPart from "../components/TestimoniPart";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
         <AboutusSection />
         <OurSeviceSection />
         <SectionDestination />
-        <TestimoniSection />
+        <TestimoniPart />
         <Footer />
       </div>
     </>

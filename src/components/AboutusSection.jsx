@@ -21,7 +21,7 @@ export default function AboutusSection() {
                 to="/About"
                 className="text-blue-500 hover:text-blue-600 font-medium"
               >
-                Learn more about us <span className="ml-2">&#8594;</span>
+                Learn more about us !
               </Link>
             </div>
           </div>
