@@ -1,9 +1,17 @@
 import LogoNeza from "../assets/LogoNeza.png";
 import { Link } from "react-router";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 export default function AboutusSection() {
+  AOS.init();
   return (
-    <section className="bg-gray-100">
+    <section
+      className="bg-gray-100"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="3000"
+    >
       <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
           <div className="max-w-lg">

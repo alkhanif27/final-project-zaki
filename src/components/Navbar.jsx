@@ -16,7 +16,9 @@ export default function Navbar() {
     <nav className="bg-white text-green-900 p-4 sticky container">
       <div className="container flex justify-between items-center py-5">
         {/* logo */}
-        <img src={LogoNeza} alt="logo" className="w-40 h-20"/>
+        <div>
+          <img src={LogoNeza} alt="logo" className="w-36 h-16" />
+        </div>
         {/* menus desktop */}
         <ul className="sm:flex gap-4 items-center hidden font-bold ">
           {/* pengulangan array list menus */}
@@ -26,7 +28,7 @@ export default function Navbar() {
                 {menu.name}
               </Link>
             </li>
-          ))} 
+          ))}
         </ul>
         {/* button trigger mobile menu */}
         <button onClick={() => setIsOpen(!isOpen)} className="sm:hidden">

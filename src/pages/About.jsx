@@ -5,8 +5,11 @@ import clockicon from "../assets/clockicon.png";
 import best_price_icon from "../assets/best_price_icon.png";
 import talenticon from "../assets/talenticon.png";
 import TestimoniPart from "../components/TestimoniPart";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 export default function About() {
+  AOS.init();
   return (
     <>
       <Navbar />
@@ -42,7 +45,12 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="text-gray-700 body-font">
+      <section
+        className="text-gray-700 body-font"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        data-aos-duration="3000"
+      >
         <div className="flex justify-center mt-10 text-4xl font-regular">
           Why Us?
         </div>

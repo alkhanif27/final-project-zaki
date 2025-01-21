@@ -1,4 +1,8 @@
+import "aos/dist/aos.css";
+import AOS from "aos";
+
 export default function TestimoniPart() {
+  AOS.init();
   const testimonials = [
     {
       name: "Sheryl Berge",
@@ -20,6 +24,9 @@ export default function TestimoniPart() {
 
   return (
     <section
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="3000"
       id="testimonials"
       aria-label="What our customers are saying"
       className="bg-slate-50 py-20 sm:py-32 container"

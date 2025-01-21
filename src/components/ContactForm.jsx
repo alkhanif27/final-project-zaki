@@ -2,8 +2,12 @@ import { useState } from "react";
 import locationicon from "../assets/locationicon.png";
 import phoneicon from "../assets/phoneicon.png";
 import duration from "../assets/duration.png";
+import "aos/dist/aos.css";
+import AOS from "aos";
+
 
 export default function ContactForm() {
+  AOS.init()
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
