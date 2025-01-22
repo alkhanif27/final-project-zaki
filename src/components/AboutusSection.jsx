@@ -7,7 +7,7 @@ export default function AboutusSection() {
   AOS.init();
   return (
     <section
-      className="bg-gray-100"
+      className="bg-gray-100 container"
       data-aos="fade-up"
       data-aos-anchor-placement="top-bottom"
       data-aos-duration="3000"
@@ -27,7 +27,7 @@ export default function AboutusSection() {
             <div className="mt-8">
               <Link
                 to="/About"
-                className="text-blue-500 hover:text-blue-600 font-medium"
+                className="text-blue-500 hover:text-blue-900 font-medium"
               >
                 Learn more about us !
               </Link>

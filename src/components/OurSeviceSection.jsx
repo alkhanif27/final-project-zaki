@@ -1,40 +1,48 @@
-export default function OurSeviceSection() {
+import SewaMobilPhoto from "../assets/SewaMobilPhoto.jpg";
+import TourPackagePhoto from "../assets/TourPackagephoto.jpg";
+import { Link } from "react-router";
+import "aos/dist/aos.css";
+import AOS from "aos";
+
+export default function OurServiceSection() {
+  AOS.init();
   return (
     <>
-      <p className="text-center font-extrabold">Our Service</p>
-      <div className="grid grid-cols-2 p-8">
-        <div className="hero bg-base-200 min-h-screen">
-          <div className="hero-content flex-col lg:flex-row-reverse">
+      <div
+        className="container bg-gray-100"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        data-aos-duration="3000"
+      >
+        <p className="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl mt-8 p-5">
+          Our Service
+        </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
+          <div className="flex flex-col bg-base-200 p-6 rounded-lg shadow-lg h-full">
             <img
-              src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-              className="max-w-sm rounded-lg shadow-2xl"
+              src={SewaMobilPhoto}
+              alt="Rent Car"
+              className="w-full h-64 object-cover rounded-lg shadow-lg mb-6"
             />
-            <div>
-              <h1 className="text-5xl font-bold">Rent Car</h1>
-              <p className="py-6">
-                Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                assumenda excepturi exercitationem quasi. In deleniti eaque aut
-                repudiandae et a id nisi.
-              </p>
-              <button className="btn btn-primary">Get Started</button>
-            </div>
+            <Link
+              to="/RentCar"
+              className="hover:opacity-50 transition-all mt-auto text-3xl lg:text-5xl font-bold text-center mb-4"
+            >
+              Rent Car
+            </Link>
           </div>
-        </div>
-        <div className="hero bg-base-200 min-h-screen">
-          <div className="hero-content flex-col lg:flex-row-reverse">
+          <div className="flex flex-col bg-base-200 p-6 rounded-lg shadow-lg h-full">
             <img
-              src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-              className="max-w-sm rounded-lg shadow-2xl"
+              src={TourPackagePhoto}
+              alt="Tour Package"
+              className="w-full h-64 object-cover rounded-lg shadow-lg mb-6"
             />
-            <div>
-              <h1 className="text-5xl font-bold">Paket Wisata</h1>
-              <p className="py-6">
-                Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                assumenda excepturi exercitationem quasi. In deleniti eaque aut
-                repudiandae et a id nisi.
-              </p>
-              <button className="btn btn-primary">Get Started</button>
-            </div>
+            <Link
+              to="TourPackage"
+              className=" hover:opacity-50 transition-all mt-auto text-3xl lg:text-5xl font-bold text-center mb-4"
+            >
+              Tour Package
+            </Link>
           </div>
         </div>
       </div>
