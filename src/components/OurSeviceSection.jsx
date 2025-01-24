@@ -14,7 +14,7 @@ export default function OurServiceSection() {
         data-aos-anchor-placement="top-bottom"
         data-aos-duration="3000"
       >
-        <p className="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl mt-8 p-5">
+        <p className="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl p-5">
           Our Service
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
@@ -26,7 +26,7 @@ export default function OurServiceSection() {
             />
             <Link
               to="/RentCar"
-              className="hover:opacity-50 transition-all mt-auto text-3xl lg:text-5xl font-bold text-center mb-4"
+              className="hover:opacity-50 mt-auto text-3xl lg:text-5xl font-bold text-center mb-4"
             >
               Rent Car
             </Link>
@@ -39,7 +39,7 @@ export default function OurServiceSection() {
             />
             <Link
               to="TourPackage"
-              className=" hover:opacity-50 transition-all mt-auto text-3xl lg:text-5xl font-bold text-center mb-4"
+              className=" hover:opacity-50 mt-auto text-3xl lg:text-5xl font-bold text-center mb-4"
             >
               Tour Package
             </Link>
