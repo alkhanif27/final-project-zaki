@@ -26,7 +26,7 @@ export default function AboutusSection() {
             </p>
             <div className="mt-8">
               <Link
-                to="/About"
+                to="/about"
                 className="text-blue-500 hover:text-blue-900 font-medium"
               >
                 Learn more about us !

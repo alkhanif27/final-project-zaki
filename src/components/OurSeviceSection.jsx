@@ -25,7 +25,7 @@ export default function OurServiceSection() {
               className="w-full h-64 object-cover rounded-lg shadow-lg mb-6"
             />
             <Link
-              to="/RentCar"
+              to="/service"
               className="hover:opacity-50 mt-auto text-3xl lg:text-5xl font-bold text-center mb-4"
             >
               Rent Car
@@ -38,7 +38,7 @@ export default function OurServiceSection() {
               className="w-full h-64 object-cover rounded-lg shadow-lg mb-6"
             />
             <Link
-              to="TourPackage"
+              to="/service"
               className=" hover:opacity-50 mt-auto text-3xl lg:text-5xl font-bold text-center mb-4"
             >
               Tour Package

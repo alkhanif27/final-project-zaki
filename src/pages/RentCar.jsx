@@ -11,7 +11,6 @@ export default function RentCar() {
       <RentCarVip />
       <RentCarBus />
       <RentCarReguler />
-
       <Footer />
     </>
   );

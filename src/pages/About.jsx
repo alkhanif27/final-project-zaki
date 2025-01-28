@@ -13,13 +13,13 @@ export default function About() {
   return (
     <>
       <Navbar />
-      <section
-        className="bg-gray-100"
-        data-aos="fade-up"
-        data-aos-anchor-placement="top-bottom"
-        data-aos-duration="3000"
-      >
-        <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+      <section className="bg-gray-100">
+        <div
+          className="container mx-auto py-16 px-4 sm:px-6 lg:px-8"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="3000"
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
             <div className="max-w-lg">
               <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -50,7 +50,12 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="text-gray-700 body-font">
+      <section
+        className="text-gray-700 body-font"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        data-aos-duration="3000"
+      >
         <div className="flex justify-center mt-10 text-4xl font-regular">
           Why Us?
         </div>

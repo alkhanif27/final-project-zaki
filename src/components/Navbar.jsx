@@ -17,8 +17,10 @@ export default function Navbar() {
       <div className="container flex justify-between items-center py-5">
         {/* logo */}
         <div>
-          <img src={LogoNeza} alt="logo" className="w-36 h-16" />
-        </div>
+      <Link to="/">
+        <img src={LogoNeza} alt="logo" className="w-36 h-16" />
+      </Link>
+    </div>
         {/* menus desktop */}
         <ul className="sm:flex gap-4 items-center hidden font-bold ">
           {/* pengulangan array list menus */}
