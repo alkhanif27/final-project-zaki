@@ -60,7 +60,7 @@ export default function TourPackageJogja() {
               className="w-full h-64 object-cover rounded-lg shadow-lg mb-6"
             />
             <p className="mt-auto text-black text-3xl lg:text-5xl font-bold text-center">
-              One Day Trip
+              Two Day Trip
             </p>
             <p className="flex-grow p-4">
               Price : Rp 1.800.000 / pack
