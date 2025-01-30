@@ -3,7 +3,6 @@ import HiacePremioPict from "../assets/HiacePremioPict.jpg";
 import BigBusPict from "../assets/BigBusPict.jpg";
 import DiengPict from "../assets/DiengPict.jpg";
 import YogyakartaPict from "../assets/YogyakartaPict.jpg";
-
 import { Link } from "react-router";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -96,11 +95,23 @@ export default function Service() {
               />
             </div>
             <Link
-              to="/RentCarReguler"
+              to="/TourPackageJogja"
               className="hover:opacity-50 mt-auto text-3xl lg:text-5xl font-bold text-center mb-4"
             >
               Yogyakarta
             </Link>
+            <p className="flex-grow">
+              Discover the cultural and natural wonders of Yogyakarta, the heart
+              of Java! Explore the majestic Borobudur Temple, the worlds largest
+              Buddhist monument, and admire the intricate beauty of Prambanan
+              Temple. Stroll through the royal Kraton (Sultans Palace) and
+              experience Javanese traditions firsthand. Wander around the lively
+              Malioboro Street, perfect for shopping and street food delights.
+              For nature lovers, marvel at the breathtaking Merapi Lava Tour,
+              the stunning Tebing Breksi, and the golden shores of Parangtritis
+              Beach. Get ready for an unforgettable journey filled with history,
+              adventure, and local charm!
+            </p>
           </div>
           <div className="flex flex-col bg-gray-200 p-6 rounded-lg shadow-lg h-full">
             <div className="h-64 w-full overflow-hidden rounded-lg mb-6">
@@ -111,11 +122,23 @@ export default function Service() {
               />
             </div>
             <Link
-              to="/RentCarVip"
+              to="/TourPackageDieng"
               className="hover:opacity-50 mt-auto text-3xl lg:text-5xl font-bold text-center mb-4"
             >
               Dieng Plateau
             </Link>
+            <p className="flex-grow">
+              Escape to the mystical highlands of Dieng Plateau, a land above
+              the clouds! Witness the magical golden sunrise at Sikunir Hill,
+              where the sky paints a masterpiece above misty valleys. Explore
+              the mesmerizing Telaga Warna, a colorful lake that changes hues
+              due to its rich minerals. Visit the ancient Dieng Temples, Javas
+              oldest Hindu shrines, and feel the sacred aura of history. Get up
+              close to the steaming Sikidang Crater, a natural geothermal
+              wonder. With cool mountain air, breathtaking landscapes, and rich
+              cultural heritage, Dieng promises an unforgettable experience like
+              no other!
+            </p>
           </div>
         </div>
       </div>

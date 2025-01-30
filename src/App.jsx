@@ -6,6 +6,8 @@ import Contact from "./pages/Contact";
 import RentCarReguler from "./components/RentCarReguler";
 import RentCarVip from "./components/RentCarVip";
 import RentCarBus from "./components/RentCarBus";
+import TourPackageJogja from "./pages/TourPackageJogja";
+import TourPackageDieng from "./pages/TourPackageDieng";
 
 export default function App() {
   return (
@@ -18,6 +20,8 @@ export default function App() {
         <Route path="/rentcarreguler" element={<RentCarReguler />} />
         <Route path="/rentcarvip" element={<RentCarVip />} />
         <Route path="/rentcarbus" element={<RentCarBus />} />
+        <Route path="/tourpackagejogja" element={<TourPackageJogja />} />
+        <Route path="/tourpackagedieng" element={<TourPackageDieng />} />
       </Routes>
     </BrowserRouter>
   );
