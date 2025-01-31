@@ -1,58 +1,64 @@
-import { useEffect } from "react";
-import { useState } from "react";
-import { Link } from "react-router";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import { useEffect, useState } from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
+const API_URL =
+  "https://script.google.com/macros/s/AKfycbwYEbuLC6dRuTBxcgFOZY9fxEq2mjYzNcEg00a79seGhoEak7ajo4GP6OfVvfqGxeQ/exec";
 
 export default function RentCarReguler() {
-  // tempat untuk menampung data product
-  const [products, setProducts] = useState([]);
+  const [cars, setCars] = useState([]);
 
-  // mendapatkan data product
-  function getProducts() {
-    fetch("https://dummyjson.com/products")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data.products);
-        setProducts(data.products);
-      });
-  }
-
-  // useEffect mounting, hanya dijalankan sekali
   useEffect(() => {
-    getProducts();
+    fetch(API_URL)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("API Response:", data);
+        setCars(data.data || []);
+      })
+      .catch((error) => console.error("Error fetching data:", error));
   }, []);
+
+  // Fungsi untuk mengubah URL Google Drive ke direct image link (thumbnail)
+  const getDirectImageLink = (driveUrl) => {
+    const match = driveUrl.match(/\/d\/(.+?)\//);
+    return match
+      ? `https://drive.google.com/thumbnail?id=${match[1]}&sz=w1000`
+      : driveUrl;
+  };
 
   return (
     <>
       <Navbar />
       <div className="container py-10">
-        <h1 className="font-bold text-2xl mb-2">SectionProduct</h1>
-        <div className="grid grid-cols-4 gap-4">
-          {products.map((product) => (
-            <div key={product.id} className="card bg-base-100 shadow-xl">
-              <figure>
-                <img
-                  src={product.thumbnail}
-                  alt={product.title}
-                  className="w-full h-48 object-cover"
-                />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title">{product.title}</h2>
-                <p className="text-sm text-gray-500">{product.description}</p>
-                <p className="text-lg font-bold">${product.price}</p>
-                <div className="card-actions justify-end">
-                  <Link
-                    to={`/products/${product.id}`}
-                    className="btn btn-primary"
-                  >
-                    View Details
-                  </Link>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {Array.isArray(cars) && cars.length > 0 ? (
+            cars.map((car, index) => (
+              <div key={index} className="card bg-white shadow-lg rounded-lg overflow-hidden">
+                <figure className="w-full h-48">
+                  <img
+                    src={getDirectImageLink(car["Gambar Mobil"])}
+                    alt={car["Nama Mobil"]}
+                    className="w-full h-full object-cover"
+                  />
+                </figure>
+                <div className="p-4">
+                  <h2 className="text-xl font-semibold text-gray-800 mb-2">{car["Nama Mobil"]}</h2>
+                  <div className="text-sm text-gray-600 space-y-1">
+                    <p>
+                      <span className="font-medium">Harga + Driver:</span> 
+                      <span className="text-green-600 font-bold"> Rp{car["Harga Mobil + Driver"].toLocaleString("id-ID")}</span>
+                    </p>
+                    <p>
+                      <span className="font-medium">Harga + Driver + BBM:</span> 
+                      <span className="text-red-600 font-bold"> Rp{car["Harga Mobil + Driver + BBM"].toLocaleString("id-ID")}</span>
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <p className="text-center text-gray-500">Loading atau tidak ada data...</p>
+          )}
         </div>
       </div>
       <Footer />
