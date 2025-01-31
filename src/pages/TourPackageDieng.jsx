@@ -3,6 +3,7 @@ import OneDayDiengPict from "../assets/OneDayDiengPict.jpg";
 import TwoDayDiengPict from "../assets/TwoDayDiengPict.jpg";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import BookingButtonPackage from "../components/BookingButtonPackage";
 export default function TourPackageJogja() {
   return (
     <>
@@ -52,6 +53,12 @@ export default function TourPackageJogja() {
               Facilities : Private car, driver, fuel, parking fee, mineral
               water, and entrance tickets
             </p>
+            <div className="mt-5">
+              <BookingButtonPackage
+                packageName="One Day Trip"
+                category="dieng"
+              />
+            </div>
           </div>
           <div className="flex flex-col bg-base-200 p-6 rounded-lg shadow-lg h-full">
             <img
@@ -69,6 +76,12 @@ export default function TourPackageJogja() {
               Facilities : Private car, driver, fuel, parking fee, mineral
               water, and entrance tickets
             </p>
+            <div className="mt-5">
+              <BookingButtonPackage
+                packageName="Two Day Trip"
+                category="dieng"
+              />
+            </div>
           </div>
         </div>
       </section>

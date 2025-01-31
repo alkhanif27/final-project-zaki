@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import BookingButton from "./BookingButton";
+import NotesRentCar from "./NotesRentCar";
 
 const API_URL =
   "https://script.google.com/macros/s/AKfycbxJyF7RtYG54MYsd5-foCgsnvnTCGc5HmGD-sRRwVx7N4_8LfGEpJsULoHsDSTfFMsX/exec";
@@ -67,15 +69,19 @@ export default function RentCarBus() {
                       </span>
                     </p>
                   </div>
+                  <div className="mt-5">
+                    <BookingButton carName={car["Nama Mobil"]} />
+                  </div>
                 </div>
               </div>
             ))
           ) : (
             <p className="text-center text-gray-500">
-              Loading atau tidak ada data...
+              Loading ...
             </p>
           )}
         </div>
+        <NotesRentCar />
       </div>
       <Footer />
     </>
