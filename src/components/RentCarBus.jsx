@@ -23,10 +23,15 @@ export default function RentCarBus() {
   // Fungsi untuk mengubah URL Google Drive ke direct image link (thumbnail)
   const getDirectImageLink = (driveUrl) => {
     const match = driveUrl.match(/\/d\/(.+?)\//);
-    return match
-      ? `https://drive.google.com/thumbnail?id=${match[1]}&sz=w1000`
+    const directLink = match
+      ? `https://lh3.googleusercontent.com/u/0/d/${match[1]}=w1000`
       : driveUrl;
+    console.log("Generated Image URL:", directLink); // Debugging
+    return directLink;
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
@@ -42,8 +47,11 @@ export default function RentCarBus() {
                 <figure className="w-full h-48">
                   <img
                     src={getDirectImageLink(car["Gambar Mobil"])}
-                    alt={car["Nama Mobil"]}
+                    alt={car["Nama Mobil"] || "Gambar tidak tersedia"}
                     className="w-full h-full object-cover"
+                    onError={(e) =>
+                      console.log("Error loading image:", e.target.src)
+                    }
                   />
                 </figure>
                 <div className="p-4">
@@ -76,9 +84,7 @@ export default function RentCarBus() {
               </div>
             ))
           ) : (
-            <p className="text-center text-gray-500">
-              Loading ...
-            </p>
+            <p className="text-center text-gray-500">Loading ...</p>
           )}
         </div>
         <NotesRentCar />

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import InnovaPict from "../assets/InnovaPict.jpg";
 import HiacePremioPict from "../assets/HiacePremioPict.jpg";
 import BigBusPict from "../assets/BigBusPict.jpg";
@@ -7,6 +8,9 @@ import { Link } from "react-router";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 export default function Service() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Navbar />

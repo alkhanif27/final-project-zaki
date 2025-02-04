@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import LogoNeza from "../assets/LogoNeza.png";
@@ -10,6 +12,9 @@ import AOS from "aos";
 
 export default function About() {
   AOS.init();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Navbar />

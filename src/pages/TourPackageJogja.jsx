@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import MalioboroPict from "../assets/MalioboroPict.jpg";
 import OneDayJogjaPict from "../assets/OneDayJogjaPict.jpg";
 import TwoDayJogjaPict from "../assets/TwoDayJogjaPict.jpg";
@@ -5,6 +6,9 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import BookingButtonPackage from "../components/BookingButtonPackage";
 export default function TourPackageJogja() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Navbar />

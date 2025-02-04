@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import KawahDiengPict from "../assets/KawahDiengPict.jpg";
 import OneDayDiengPict from "../assets/OneDayDiengPict.jpg";
 import TwoDayDiengPict from "../assets/TwoDayDiengPict.jpg";
@@ -5,6 +6,10 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import BookingButtonPackage from "../components/BookingButtonPackage";
 export default function TourPackageJogja() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Navbar />
