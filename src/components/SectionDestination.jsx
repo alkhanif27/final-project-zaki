@@ -2,6 +2,7 @@ import Pantai from "../assets/Pantai.jpg";
 import JeepTour from "../assets/JeepTour.jpg";
 import Candi from "../assets/Candi.jpg";
 import CaveTubing from "../assets/CaveTubing.jpg";
+import { Link } from "react-router";
 
 export default function SectionDestination() {
   return (
@@ -21,7 +22,12 @@ export default function SectionDestination() {
               className="absolute inset-0 h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
-            <h3 className="z-10 mt-3 text-3xl font-bold text-white">BEACH</h3>
+            <Link
+              to="/BeachDestination"
+              className="z-10 mt-3 text-3xl font-bold text-white"
+            >
+              <h3>BEACH</h3>
+            </Link>
             <div className="z-10 gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
               Golden Sandy Shores
             </div>
@@ -36,9 +42,13 @@ export default function SectionDestination() {
               className="absolute inset-0 h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
-            <h3 className="z-10 mt-3 text-3xl font-bold text-white">
-              JEEP TOUR
-            </h3>
+            <Link
+              to="/JeepTourDestination"
+              className="z-10 mt-3 text-3xl font-bold text-white"
+            >
+              <h3>JEEP TOUR</h3>
+            </Link>
+
             <div className="z-10 gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
               Adventure of Heart
             </div>
@@ -54,7 +64,13 @@ export default function SectionDestination() {
               className="absolute inset-0 h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
-            <h3 className="z-10 mt-3 text-3xl font-bold text-white">TEMPLE</h3>
+
+            <Link
+              to="/TempleDestination"
+              className="z-10 mt-3 text-3xl font-bold text-white"
+            >
+              <h3>TEMPLE</h3>
+            </Link>
             <div className="z-10 gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
               Place of Religion
             </div>
@@ -69,9 +85,12 @@ export default function SectionDestination() {
               className="absolute inset-0 h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
-            <h3 className="z-10 mt-3 text-3xl font-bold text-white">
-              CAVE TUBING
-            </h3>
+            <Link
+              to="/CaveTubingDestination"
+              className="z-10 mt-3 text-3xl font-bold text-white"
+            >
+              <h3>CAVE TUBING</h3>
+            </Link>
             <div className="z-10 gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
               Its a Journey
             </div>
