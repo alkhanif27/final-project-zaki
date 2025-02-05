@@ -11,7 +11,6 @@ import TourPackageDieng from "./pages/TourPackageDieng";
 import BeachDestination from "./components/BeachDestination";
 import TempleDestination from "./components/TempleDestination";
 import JeepTourDestination from "./components/JeepTourDestination";
-import CaveTubingDestination from "./components/CaveTubingDEstination";
 
 export default function App() {
   return (
@@ -29,7 +28,6 @@ export default function App() {
         <Route path="/beachdestination" element={<BeachDestination />} />
         <Route path="/templedestination" element={<TempleDestination />} />
         <Route path="/jeeptourdestination" element={<JeepTourDestination />} />
-        <Route path="/cavetubingdestination" element={<CaveTubingDestination />} />
       </Routes>
     </BrowserRouter>
   );
