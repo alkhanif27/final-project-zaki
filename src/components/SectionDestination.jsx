@@ -86,7 +86,7 @@ export default function SectionDestination() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
             <Link
-              to="/CaveTubingDestination"
+              to="/TubingCaveDestination"
               className="z-10 mt-3 text-3xl font-bold text-white"
             >
               <h3>CAVE TUBING</h3>
