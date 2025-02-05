@@ -16,7 +16,7 @@ export default function CaveTubingDestination() {
             underground rivers, surrounded by ancient rock formations and
             breathtaking cave chambers. Feel the thrill as you drift along the
             cool, dark waters, guided only by the glimmer of natural light
-            filtering through the cave’s openings. Marvel at the stunning
+            filtering through the caves openings. Marvel at the stunning
             stalactites and stalagmites that have formed over thousands of
             years, creating a mesmerizing underground paradise. The echoes of
             flowing water and hidden wonders make cave tubing an unforgettable
