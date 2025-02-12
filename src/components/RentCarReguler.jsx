@@ -15,7 +15,6 @@ export default function RentCarReguler() {
     fetch(API_URL)
       .then((response) => response.json())
       .then((data) => {
-        console.log("API Response:", data);
         setCars(data.data || []);
         setLoading(false);
       })
@@ -30,7 +29,6 @@ export default function RentCarReguler() {
     const directLink = match
       ? `https://lh3.googleusercontent.com/u/0/d/${match[1]}=w1000`
       : driveUrl;
-    console.log("Generated Image URL:", directLink);
     return directLink;
   };
 

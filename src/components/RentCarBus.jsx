@@ -15,7 +15,6 @@ export default function RentCarBus() {
     fetch(API_URL)
       .then((response) => response.json())
       .then((data) => {
-        console.log("API Response:", data);
         setCars(data.data || []);
         setLoading(false);
       })
@@ -30,7 +29,6 @@ export default function RentCarBus() {
     const directLink = match
       ? `https://lh3.googleusercontent.com/u/0/d/${match[1]}=w1000`
       : driveUrl;
-    console.log("Generated Image URL:", directLink);
     return directLink;
   };
 
@@ -43,68 +41,68 @@ export default function RentCarBus() {
       <Navbar />
       <div className="container py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {loading
-            ? Array.from({ length: 4 }).map((_, index) => (
-                <div
-                  key={index}
-                  className="card bg-white shadow-lg rounded-lg overflow-hidden animate-pulse"
-                >
-                  <div className="w-full h-48 bg-gray-300"></div>
-                  <div className="p-4">
-                    <div className="h-6 bg-gray-300 rounded w-3/4 mb-2"></div>
-                    <div className="h-4 bg-gray-300 rounded w-1/2 mb-2"></div>
-                    <div className="h-4 bg-gray-300 rounded w-2/3"></div>
+          {loading ? (
+            Array.from({ length: 4 }).map((_, index) => (
+              <div
+                key={index}
+                className="card bg-white shadow-lg rounded-lg overflow-hidden animate-pulse"
+              >
+                <div className="w-full h-48 bg-gray-300"></div>
+                <div className="p-4">
+                  <div className="h-6 bg-gray-300 rounded w-3/4 mb-2"></div>
+                  <div className="h-4 bg-gray-300 rounded w-1/2 mb-2"></div>
+                  <div className="h-4 bg-gray-300 rounded w-2/3"></div>
+                </div>
+              </div>
+            ))
+          ) : Array.isArray(cars) && cars.length > 0 ? (
+            cars.map((car, index) => (
+              <div
+                key={index}
+                className="card bg-white shadow-lg rounded-lg overflow-hidden"
+              >
+                <figure className="w-full h-48">
+                  <img
+                    src={getDirectImageLink(car["Gambar Mobil"])}
+                    alt={car["Nama Mobil"] || "Gambar tidak tersedia"}
+                    className="w-full h-full object-cover"
+                    onError={(e) =>
+                      console.log("Error loading image:", e.target.src)
+                    }
+                  />
+                </figure>
+                <div className="p-4">
+                  <h2 className="text-xl font-semibold text-gray-800 mb-2">
+                    {car["Nama Mobil"]}
+                  </h2>
+                  <div className="text-sm text-gray-600 space-y-1">
+                    <p>
+                      <span className="font-medium">Harga + Driver:</span>
+                      <span className="text-green-600 font-bold">
+                        {" "}
+                        Rp{car["Harga Mobil + Driver"].toLocaleString("id-ID")}
+                      </span>
+                    </p>
+                    <p>
+                      <span className="font-medium">Harga + Driver + BBM:</span>
+                      <span className="text-red-600 font-bold">
+                        {" "}
+                        Rp
+                        {car["Harga Mobil + Driver + BBM"].toLocaleString(
+                          "id-ID"
+                        )}
+                      </span>
+                    </p>
+                  </div>
+                  <div className="mt-5">
+                    <BookingButton carName={car["Nama Mobil"]} />
                   </div>
                 </div>
-              ))
-            : Array.isArray(cars) && cars.length > 0
-            ? cars.map((car, index) => (
-                <div
-                  key={index}
-                  className="card bg-white shadow-lg rounded-lg overflow-hidden"
-                >
-                  <figure className="w-full h-48">
-                    <img
-                      src={getDirectImageLink(car["Gambar Mobil"])}
-                      alt={car["Nama Mobil"] || "Gambar tidak tersedia"}
-                      className="w-full h-full object-cover"
-                      onError={(e) =>
-                        console.log("Error loading image:", e.target.src)
-                      }
-                    />
-                  </figure>
-                  <div className="p-4">
-                    <h2 className="text-xl font-semibold text-gray-800 mb-2">
-                      {car["Nama Mobil"]}
-                    </h2>
-                    <div className="text-sm text-gray-600 space-y-1">
-                      <p>
-                        <span className="font-medium">Harga + Driver:</span>
-                        <span className="text-green-600 font-bold">
-                          {" "}
-                          Rp{car["Harga Mobil + Driver"].toLocaleString("id-ID")}
-                        </span>
-                      </p>
-                      <p>
-                        <span className="font-medium">Harga + Driver + BBM:</span>
-                        <span className="text-red-600 font-bold">
-                          {" "}
-                          Rp
-                          {car["Harga Mobil + Driver + BBM"].toLocaleString(
-                            "id-ID"
-                          )}
-                        </span>
-                      </p>
-                    </div>
-                    <div className="mt-5">
-                      <BookingButton carName={car["Nama Mobil"]} />
-                    </div>
-                  </div>
-                </div>
-              ))
-            : (
-                <p className="text-center text-gray-500">Data tidak tersedia.</p>
-              )}
+              </div>
+            ))
+          ) : (
+            <p className="text-center text-gray-500">Data tidak tersedia.</p>
+          )}
         </div>
         <NotesRentCar />
       </div>

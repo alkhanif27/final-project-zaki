@@ -15,7 +15,6 @@ export default function RentCarVip() {
     fetch(API_URL)
       .then((response) => response.json())
       .then((data) => {
-        console.log("API Response:", data);
         setCars(data.data || []);
         setLoading(false);
       })
@@ -30,7 +29,6 @@ export default function RentCarVip() {
     const directLink = match
       ? `https://lh3.googleusercontent.com/u/0/d/${match[1]}=w1000`
       : driveUrl;
-    console.log("Generated Image URL:", directLink);
     return directLink;
   };
 
@@ -81,11 +79,14 @@ export default function RentCarVip() {
                         <span className="font-medium">Harga + Driver:</span>
                         <span className="text-green-600 font-bold">
                           {" "}
-                          Rp{car["Harga Mobil + Driver"].toLocaleString("id-ID")}
+                          Rp
+                          {car["Harga Mobil + Driver"].toLocaleString("id-ID")}
                         </span>
                       </p>
                       <p>
-                        <span className="font-medium">Harga + Driver + BBM:</span>
+                        <span className="font-medium">
+                          Harga + Driver + BBM:
+                        </span>
                         <span className="text-red-600 font-bold">
                           {" "}
                           Rp
