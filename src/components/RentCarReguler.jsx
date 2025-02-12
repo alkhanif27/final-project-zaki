@@ -17,7 +17,7 @@ export default function RentCarReguler() {
       .then((data) => {
         setCars(data.data || []);
         setLoading(false);
-      })
+      }) 
       .catch((error) => {
         console.error("Error fetching data:", error);
         setLoading(false);
