@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import BookingButton from "./BookingButton";
 import NotesRentCar from "./NotesRentCar";
-
+ 
 const API_URL =
   "https://script.google.com/macros/s/AKfycbwAcBkELCVZ3LUuGXs57WhZoe6hqflpryyu2rVvdDfUpl_omN1o0hnlyVz-CsrioT8/exec";
 
