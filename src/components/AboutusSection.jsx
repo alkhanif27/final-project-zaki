@@ -22,7 +22,7 @@ export default function AboutusSection() {
               Neza Transport is a tour and transport company operating in
               Yogyakarta. Established since 2005, we continue to serve both
               domestic and international tourists, offering various tour
-              packages in Yogyakarta, Java, and Bali.
+              packages in Yogyakarta, Java, and also Bali.
             </p>
             <div className="mt-8">
               <Link
